@@ -1,0 +1,39 @@
+{
+  "name": "Songza Hotkeys",
+  "version": "1.0",
+  "description": "Allows the keyboard play/pause/skip buttons to control Sognza",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action" :
+  {
+    "default_title" : "Keyboard shortcuts to control the music are enabled.",
+    "default_icon" : "icon-19.png"
+  },
+  "permissions" : [
+    "declarativeContent",
+    "*://*.songza.com/"
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "commands" : {
+    "play-pause" : {
+      "suggested_key": {
+        "default": "MediaPlayPause"
+      },
+      "description": "Play or pause the current track",
+      "global": true
+    },
+    "next-track": {
+      "suggested_key": {
+        "default": "MediaNextTrack"
+      },
+      "description": "Skip the current track",
+      "global": true
+    },
+  },
+  "manifest_version": 2
+}
